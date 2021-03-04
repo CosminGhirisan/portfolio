@@ -1,0 +1,55 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/bg-video";
+@import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/form";
+@import "components/popup";
+@import "components/story";
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+
+@import "pages/home";
+
+.btn-back {
+  width: 10rem;
+  height: 4rem;
+  display: block;
+  position: fixed;
+    top: 3rem;
+    left: 5rem;   
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  padding-top: .4rem;
+  z-index: 9999;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  background-color: rgba(119, 136, 153, 0.7);
+  transition: all .2s;
+
+  &__btn {
+    text-decoration: none;
+    color: rgb(6, 7, 48);
+    transition: all .2s;    
+  }
+
+  &:hover {
+    background-color: rgba(150, 0, 0, .2);
+    transform: translateY(-3px) scale(1.05);
+  }
+}
+
