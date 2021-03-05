@@ -308,6 +308,28 @@ nav {
     }
   }
 
+  h2 {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 12rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    color: $gray-color;
+
+    @media only screen and (max-width: 992px) {
+      right: -3rem;
+      font-size: 10rem;
+      top: 10%;
+    }
+
+    @media only screen and (max-width: 350px) {
+      right: -3rem;
+      font-size: 6rem;
+    }
+  }
+
   .about-me {
     color: $white-color;
     display: flex;
@@ -316,28 +338,9 @@ nav {
     justify-content: center;
     padding: 0 3rem;
     position: relative;
-
-    h2 {
-      position: absolute;
-      top: 0;
-      right: 20%;
-      font-family: "Ubuntu Mono", monospace;
-      font-size: 12rem;
-      font-weight: 700;
-      letter-spacing: 0.5rem;
-      color: $gray-color;
-
-      @media only screen and (max-width: 992px) {
-        right: -3rem;
-        font-size: 10rem;
-        top: 10%;
-      }
-
-      @media only screen and (max-width: 350px) {
-        right: -3rem;
-        font-size: 6rem;
-      }
-    }
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: 1s all ease-in-out;
 
     h3 {
       margin-bottom: 2rem;
@@ -368,6 +371,11 @@ nav {
         transform: scale(1);
       }
     }
+  }
+
+  .about-me-appear {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .close-modal {
@@ -407,7 +415,7 @@ nav {
       letter-spacing: normal;
     }
 
-    h2 {
+    h3 {
       margin-bottom: 1rem;
     }
 

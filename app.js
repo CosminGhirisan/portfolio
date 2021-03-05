@@ -104,3 +104,21 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+
+// ===== ABOUT ME SCROLL APPEAR ===== //
+function scrollAppear(){
+   var aboutMe = document.querySelector('.about-me');
+   var introPosition = aboutMe.getBoundingClientRect().top;
+   var screenPositon = window.innerHeight /3;
+
+   if(introPosition < screenPositon) {
+      aboutMe.classList.add('about-me-appear');
+   }
+
+   if(introPosition > screenPositon) {
+      aboutMe.classList.remove('about-me-appear');
+   }
+}
+
+window.addEventListener('scroll', scrollAppear);
