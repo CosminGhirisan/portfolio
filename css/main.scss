@@ -66,7 +66,7 @@ nav {
     display: inline-block;
     transition: all 0.4s;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 992px) {
       margin: 0 1rem;
     }
 
@@ -76,14 +76,20 @@ nav {
     }
   }
 
-  .active {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $red-color;
-    border-bottom-width: 0.2rem;
-
+  .home-navbar {
     @media only screen and (max-width: 600px) {
       display: none;
     }
+  }
+
+  .active {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid transparent;
+    border-bottom-width: 0.2rem;
+  }
+  .active:hover,
+  .active:focus {
+    border-bottom-color: $red-color;
   }
 }
 
@@ -302,6 +308,7 @@ nav {
       @media only screen and (max-width: 992px) {
         right: -3rem;
         font-size: 10rem;
+        top: 10%;
       }
 
       @media only screen and (max-width: 350px) {
@@ -619,6 +626,7 @@ nav {
     @media only screen and (max-width: 992px) {
       right: 0;
       font-size: 10rem;
+      top: 3%;
     }
 
     @media only screen and (max-width: 350px) {
@@ -688,6 +696,7 @@ nav {
     @media only screen and (max-width: 992px) {
       right: -3rem;
       font-size: 8rem;
+      top: 4%;
     }
 
     @media only screen and (max-width: 350px) {
