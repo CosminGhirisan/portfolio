@@ -468,6 +468,17 @@ nav {
     justify-content: center;
     padding-right: 2rem;
 
+    .skills-info {
+      transform: translateY(2rem);
+      opacity: 0;
+      transition: 1s all ease-in-out;
+    }
+
+    .skills-info-appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     h3 {
       margin-bottom: 2rem;
       z-index: 10;

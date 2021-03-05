@@ -601,6 +601,20 @@ nav .active:focus {
   padding-right: 2rem;
 }
 
+#skills .skills-container .skills-info {
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
+  opacity: 0;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+}
+
+#skills .skills-container .skills-info-appear {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 #skills .skills-container h3 {
   margin-bottom: 2rem;
   z-index: 10;

@@ -106,19 +106,26 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-// ===== ABOUT ME SCROLL APPEAR ===== //
+// ===== ABOUT ME && SKILLS INFO SCROLL APPEAR ===== //
 function scrollAppear(){
    var aboutMe = document.querySelector('.about-me');
-   var introPosition = aboutMe.getBoundingClientRect().top;
+   var skillsInfo = document.querySelector('.skills-info');
+   var introPositionAboutMe = aboutMe.getBoundingClientRect().top;
+   var introPositionSkillsInfo = skillsInfo.getBoundingClientRect().top;
    var screenPositon = window.innerHeight /3;
 
-   if(introPosition < screenPositon) {
+   if(introPositionAboutMe < screenPositon) {
       aboutMe.classList.add('about-me-appear');
    }
-
-   if(introPosition > screenPositon) {
+   if(introPositionAboutMe > screenPositon) {
       aboutMe.classList.remove('about-me-appear');
    }
-}
 
+   if(introPositionSkillsInfo < screenPositon) {
+      skillsInfo.classList.add('skills-info-appear');
+   }
+   if(introPositionSkillsInfo > screenPositon) {
+      skillsInfo.classList.remove('skills-info-appear');
+   }
+}
 window.addEventListener('scroll', scrollAppear);
