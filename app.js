@@ -44,8 +44,63 @@ document.querySelector('.contact').addEventListener('click', function() {
    smoothScroll('#contact',1000);
 });
 
+document.querySelector('.btn-contact').addEventListener('click', function() {
+   smoothScroll('#contact',1000);
+});
+
 document.querySelector('.btn-up').addEventListener('click', function() {
    smoothScroll('.home',1000);
 });
 
 
+// ===== TYPEWRITING FUNCTION ===== //
+const texts = ['Web Developer', 'Frontend Dev.'];
+let count = 0;
+let index = 0;
+let currentText = '';
+let letter = '';
+
+(function type(){
+   if(count === texts.length){
+      count = 0;
+   }
+   currentText = texts[count];
+   letter = currentText.slice(0, ++index);
+   document.querySelector('.typing').textContent = letter;
+   if(letter.length === currentText.length){
+      count++;
+      index = 0;
+   }
+   setTimeout (type, 400);
+}());
+
+
+
+// ===== ABOUT ME MODAL ===== //
+const modal = document.querySelector('.modal');
+const overlayModal = document.querySelector('.overlay-modal');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnsOpenModal = document.querySelectorAll('.show-modal');
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlayModal.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlayModal.classList.add('hidden');
+};
+
+for (let i = 0; i < btnsOpenModal.length; i++)
+  btnsOpenModal[i].addEventListener('click', openModal);
+
+btnCloseModal.addEventListener('click', closeModal);
+overlayModal.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});

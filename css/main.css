@@ -186,6 +186,38 @@ nav .active:focus {
   }
 }
 
+.home .title .typing {
+  position: relative;
+}
+
+.home .title .typing::after {
+  content: "";
+  padding-left: 5px;
+  width: 1px;
+  height: 7rem;
+  border-right: 2px solid #fff;
+  -webkit-animation: blink 0.5s infinite ease;
+          animation: blink 0.5s infinite ease;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .home .title p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -436,6 +468,7 @@ nav .active:focus {
       align-self: flex-end;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  cursor: pointer;
 }
 
 #about .about-me a:hover {
@@ -447,6 +480,75 @@ nav .active:focus {
 #about .about-me a:active {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+#about .close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+#about .hidden {
+  display: none;
+}
+
+#about .modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 60%;
+  max-height: 80%;
+  background-color: rgba(40, 40, 40, 0.9);
+  padding: 6rem;
+  border-radius: 1rem;
+  z-index: 18;
+  color: #fff;
+  overflow: scroll;
+}
+
+@media only screen and (max-width: 992px) {
+  #about .modal {
+    width: 95%;
+    padding: 4rem;
+    font-size: 1.4rem;
+    letter-spacing: normal;
+  }
+}
+
+#about .modal h2 {
+  margin-bottom: 1rem;
+}
+
+#about .modal p {
+  font-weight: 300;
+  text-align: justify;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+}
+
+#about .modal p span {
+  color: #fff;
+  font-weight: 700;
+}
+
+#about .overlay-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 17;
 }
 
 #skills {
