@@ -36,11 +36,19 @@ nav {
   align-items: center;
   padding: 1.5rem 0;
 
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
+
   p {
     font-size: 3.5rem;
     font-weight: 600;
     letter-spacing: 1px;
     color: $white-color;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
 
     span {
       color: $red-color;
@@ -58,6 +66,10 @@ nav {
     display: inline-block;
     transition: all 0.4s;
 
+    @media only screen and (max-width: 600px) {
+      margin: 0 1rem;
+    }
+
     &:hover,
     &:focus {
       transform: scale(1.2);
@@ -68,6 +80,10 @@ nav {
     padding-bottom: 1rem;
     border-bottom: 1px solid $red-color;
     border-bottom-width: 0.2rem;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
   }
 }
 
