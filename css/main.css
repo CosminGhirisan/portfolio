@@ -825,6 +825,10 @@ nav .active:focus {
   background-image: url("./../img/skills.jpg");
 }
 
+#work .work-container .work-img .meditation-webapp {
+  background-image: url("./../img/meditation-webapp.png");
+}
+
 #work .work-container .work-img .outdoors {
   background-image: url("./../img/outdoors.png");
 }
