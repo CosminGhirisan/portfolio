@@ -54,7 +54,7 @@ document.querySelector('.btn-up').addEventListener('click', function() {
 
 
 // ===== TYPEWRITING FUNCTION ===== //
-const texts = ['Web Developer', 'Frontend Dev.'];
+const texts = ['Frontend Dev.', 'Manual Tester'];
 let count = 0;
 let index = 0;
 let currentText = '';

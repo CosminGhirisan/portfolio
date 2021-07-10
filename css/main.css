@@ -705,15 +705,15 @@ nav .active:focus {
 }
 
 #skills .skills-container .skills-grade .js {
-  width: 55%;
+  width: 35%;
 }
 
 #skills .skills-container .skills-grade .react {
-  width: 25%;
+  width: 15%;
 }
 
 #skills .skills-container .skills-grade .nodeJS {
-  width: 35%;
+  width: 5%;
 }
 
 #skills .skills-container .skills-grade .photoshop {
