@@ -1003,6 +1003,11 @@ nav .active:focus {
   margin-bottom: 2rem;
 }
 
+#contact .contact-container .contact-type .linkedin-prof {
+  text-decoration: none;
+  color: #fff;
+}
+
 #contact h2 {
   position: absolute;
   top: 0;
